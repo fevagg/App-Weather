@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/node_modules/leaflet/dist/leaflet.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/leaflet/dist/leaflet.js"></script>
+    <title>App Weather</title>
+</head>
+<body>
+    <div class="wrapper"> 
+        <ul class="nav justify-content-start bg-dark ">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Github</a>
+            </li>
+        </ul>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center" style="height:100vh">
+                <div class="col-auto text-center">
+                    <h2>App Weather</h2>
+                    <div class="form-group">
+                        <input type="search" name="search" class="form-control my-3" style="width:200px" id="search">
+                        <button class="form-control btn btn-success" style="width:100px" id="btn-search">Search</button>
+                    </div>
+                </div>
+                <div id="app" class="row d-flex flex-column align-items-center"></div>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="js/app.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/view.js"></script>
+</html>
