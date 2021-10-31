@@ -17,7 +17,7 @@ function showPrev(array, elem){
             <a class="stretched-link link-secondary cities-link" style="text-decoration:none;" href="#">
             <div><h4 class="card-title text-left">${obj.name}</h4>
             <p class="card-text text-left">${obj.country}<p></div>
-            <img style="height:35px" src="https://www.countryflags.io/${obj.country}/flat/64.png">
+            <span class="fp fp-rounded ${obj.country.toLowerCase()}"></span>
             </a>
             </div></div>`
         }
@@ -27,7 +27,7 @@ function showPrev(array, elem){
             <a class="stretched-link link-secondary cities-link" style="text-decoration:none;" href="#">
             <div><h4 class="card-title text-left">${obj.name}</h4>
             <p class="card-text text-left">${obj.country}<p></div>
-            <img style="height:35px" src="https://www.countryflags.io/${obj.country}/flat/64.png">
+            <span class="fp fp-rounded ${obj.country.toLowerCase()}"></span>
             </a>
             </div></div>`
         }
@@ -38,14 +38,13 @@ function showPrev(array, elem){
 function prevURL(){
     const citiesLink = document.getElementsByClassName('cities-link');
     for(let city of citiesLink){
-        city.addEventListener('click', event=>{
+        city.addEventListener('click', (event)=>{
             showSpinner('app');
-            const name = event.target.firstChild.nextSibling.firstChild.innerHTML;
-            const code = event.target.firstChild.nextSibling.firstChild.nextSibling.nextSibling.innerHTML;
+            const name = event.target.children[0].firstChild.innerHTML;
+            const code = event.target.children[0].children[1].innerHTML;
             const WEATHER_API = `https://api.openweathermap.org/data/2.5/weather?q=${name},${code}&units=metric&appid=389cbfb379dd5be85d604ac8efcb9970`;
             getJSON(WEATHER_API).then(response=>{
                 if(response.status === 'ok'){
-                    console.log(response.data)
                     hideSpinner('app');
                     document.getElementById('app').innerHTML = viewWeather(response.data);
                     search.value = '';

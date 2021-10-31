@@ -6,10 +6,10 @@
   "dependencies": {
     "bootstrap": "^5.1.2",
     "cities.json": "^1.1.5",
+    "flagpack": "^1.0.5",
     "font-awesome": "^4.7.0",
     "leaflet": "^1.7.1"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "nodemon js/app.js"
   },
