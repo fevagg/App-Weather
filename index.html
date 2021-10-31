@@ -25,16 +25,18 @@
                 <a class="nav-link text-white" href="#">Github</a>
             </li>
         </ul>
-        <div class="container">
-            <div class="row d-flex align-items-center justify-content-center" style="height:100vh">
-                <div class="col-auto text-center">
+        <div class="container d-flex flex-column justify-content-center">
+            <div class="row" style="height: 50vh;">
+                <div class="col align-self-end text-center">
                     <h2>App Weather</h2>
-                    <div class="form-group">
-                        <input type="search" name="search" class="form-control my-3" style="width:200px" id="search">
+                    <div class="form-group d-inline-flex flex-column align-items-center">
+                        <input type="search" name="search" class="form-control my-3" style="width: 50vw" id="search">
                         <button class="form-control btn btn-success" style="width:100px" id="btn-search">Search</button>
                     </div>
                 </div>
-                <div id="app" class="row d-flex flex-column align-items-center"></div>
+            </div>
+            <div class="row">
+                <div id="app" class="d-flex flex-column align-items-center"></div>
             </div>
         </div>
     </div>
