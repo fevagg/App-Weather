@@ -11,12 +11,12 @@ getJSON(cities).then(result=>{
 search.addEventListener('keyup', ()=>{
     const searchedCity = citiesArray.filter(city => city.name.toLowerCase().startsWith(search.value.toLowerCase(), 0));
     showPrev(searchedCity, 'app');
-    if(search.value == ''){
+    if(search.value === ''){
         showPrev([],'app');
     }
     prevURL();
     btn.addEventListener('click', ()=>{
-        const searchedCity = citiesArray.filter(city => city.name.toLowerCase() === search.value.toLowerCase());
+        const searchedCity = citiesArray.filter(city => city.name.toLowerCase() === search.value.toLowerCase(), 0);
         showPrev(searchedCity, 'app');
         prevURL();
     });

@@ -11,26 +11,28 @@
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/node_modules/leaflet/dist/leaflet.js"></script>
     <title>App Weather</title>
+    <link rel="icon" type="image/png" href="/public/favicon/favicon-32x32.png"/>
 </head>
 <body>
     <div class="wrapper"> 
         <ul class="nav justify-content-start bg-dark ">
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Home</a>
+                <a class="nav-link text-white" href="/">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">About</a>
+                <a class="nav-link text-white" href="about.html" target="_self">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Github</a>
+                <a class="nav-link text-white" href="https://github.com/fevagg/App-Weather.git" target="_blank">Github <i class="fa fa-github fa-lg" aria-hidden="true"></i> </a>
             </li>
         </ul>
         <div class="container d-flex flex-column justify-content-center">
+            <div class="row m-4 justify-content-center" id="visited"></div>
             <div class="row" style="height: 50vh;">
                 <div class="col align-self-end text-center">
                     <h2>App Weather</h2>
                     <div class="form-group d-inline-flex flex-column align-items-center">
-                        <input type="search" name="search" class="form-control my-3" style="width: 50vw" id="search">
+                        <input type="search" name="search" class="form-control my-3" style="width: 50vw" id="search" placeholder="Select your city...">
                         <button class="form-control btn btn-success" style="width:100px" id="btn-search">Search</button>
                     </div>
                 </div>
@@ -45,4 +47,5 @@
     <script src="js/search.js"></script>
     <script src="js/map.js"></script>
     <script src="js/view.js"></script>
+    <script src="js/previous.js"></script>
 </html>
