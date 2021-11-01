@@ -18,6 +18,9 @@ function handlerWeather(){
         prev.addEventListener('click', (event)=>{
             const cityToSelect = visitedCities.find(city => city.city === event.target.parentElement.children[1].innerHTML);
             document.getElementById('app').innerHTML = viewWeather(cityToSelect);
+            document.getElementById('exit').addEventListener('click', ()=>{
+                        document.getElementById('app').innerHTML = '';
+                    });
         });
     }
 }
