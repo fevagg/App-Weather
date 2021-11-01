@@ -59,6 +59,8 @@ function prevURL(){
                     document.getElementById('visited').innerHTML = previousSearches(visitedCities);
                     localStorage.setItem('visited', JSON.stringify(visitedCities));
                     search.value = '';
+                    handlerExit();
+                    handlerWeather();
                     document.getElementById('exit').addEventListener('click', ()=>{
                         document.getElementById('app').innerHTML = '';
                     });

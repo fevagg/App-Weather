@@ -27,10 +27,10 @@ function previousSearches(array){
         console.log(arrayCutted)
         for(let obj of arrayCutted){
             html += `
-            <div class="col-auto bg-dark m-2 text-white d-flex justify-content-between align-items-center previous" style="width: 270px; height: 70px; border-radius: 17px; cursor:pointer;">
+            <div class="col-auto bg-dark m-2 text-white d-flex justify-content-between align-items-center previous" style="width: 270px; height: 70px; border-radius: 17px;cursor:pointer;">
                 <img src="https://openweathermap.org/img/wn/${obj.weather_icon}@2x.png" alt="" style="width: 100px;">
                 <h6>${obj.city}</h6><span class="m-3 fp fp-rounded ${obj.country_code.toLowerCase()}"></span>
-                <i class="fa fa-times" aria-hidden="true" style="cursor:pointer"></i>
+                <i class="fa fa-times exit" aria-hidden="true" style="cursor:pointer"></i>
             </div>`;
         }
     }else{
@@ -39,7 +39,7 @@ function previousSearches(array){
             <div class="col-auto bg-dark m-2 text-white d-flex justify-content-between align-items-center previous" style="width: 270px; height: 70px; border-radius: 17px; cursor:pointer;">
                 <img src="https://openweathermap.org/img/wn/${obj.weather_icon}@2x.png" alt="" style="width: 100px;">
                 <h6>${obj.city}</h6><span class="m-3 fp fp-rounded ${obj.country_code.toLowerCase()}"></span>
-                <i class="fa fa-times" aria-hidden="true" style="cursor:pointer"></i>
+                <i class="fa fa-times exit" aria-hidden="true" style="cursor:pointer"></i>
             </div>`
         }
     }
