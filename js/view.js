@@ -38,33 +38,19 @@ function showPrev(array, elem){
 function prevURL(){
     const citiesLink = document.getElementsByClassName('cities-link');
     for(let city of citiesLink){
-        city.addEventListener('click', (event)=>{
+        city.addEventListener('click', async (event)=>{
             showSpinner('app');
             const name = event.target.children[0].firstChild.innerHTML;
             const code = event.target.children[0].children[1].innerHTML;
-            const WEATHER_API = `https://api.openweathermap.org/data/2.5/weather?q=${name},${code}&units=metric&appid=389cbfb379dd5be85d604ac8efcb9970`;
-            getJSON(WEATHER_API).then(response=>{
-                if(response.status === 'ok'){
-                    hideSpinner('app');
-                    let citySelected = {
-                        city: response.data.name,
-                        weather_icon: response.data.weather[0].icon,
-                        weather_main: response.data.weather[0].main,
-                        min: response.data.main.temp_min,
-                        max: response.data.main.temp_max,
-                        country_code: response.data.sys.country
-                    };
-                    document.getElementById('app').innerHTML = viewWeather(citySelected);
-                    visitedCities.push(citySelected);
-                    document.getElementById('visited').innerHTML = previousSearches(visitedCities);
-                    localStorage.setItem('visited', JSON.stringify(visitedCities));
-                    search.value = '';
-                    handlerExit();
-                    handlerWeather();
-                    document.getElementById('exit').addEventListener('click', ()=>{
-                        document.getElementById('app').innerHTML = '';
-                    });
-                }
+            const citySelected = await weatherAPI(name, code);
+            viewWeather(citySelected);
+            await visitedCities.push(citySelected);
+            localStorage.setItem('visited', JSON.stringify(visitedCities));
+            previousSearches(visitedCities);
+            handlerExit();
+            handlerWeather();
+            document.getElementById('exit').addEventListener('click', ()=>{
+                document.getElementById('app').innerHTML = '';
             });
         });
     }
