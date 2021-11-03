@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/node_modules/leaflet/dist/leaflet.css">
     <link rel="stylesheet" href="/node_modules/flagpack/dist/flagpack.css">
+    <link rel="stylesheet" href="css/weather-animation.css">
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/node_modules/leaflet/dist/leaflet.js"></script>
     <title>App Weather</title>
@@ -36,12 +37,10 @@
                     </div>
                 </div>
             </div>
-          <div class="row mt-5 text-center">
-            <h3>Last searches</h3>
-          </div>
             <div class="row m-4 justify-content-center" id="visited"></div>
             <div class="row">
-                <div id="app" class="d-flex flex-column align-items-center"></div>
+                <div id="app" class="d-flex flex-column align-items-center">
+                </div>
             </div>
         </div>
     </div>
@@ -51,4 +50,5 @@
     <script src="js/map.js"></script>
     <script src="js/view.js"></script>
     <script src="js/previous.js"></script>
+    <script src="js/control.js"></script>
 </html>

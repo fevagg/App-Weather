@@ -1,0 +1,37 @@
+@keyframes weather-icon{
+    from {
+        opacity: 0;
+        left:0;
+        bottom: 150px;
+    }
+    to{
+        opacity: 35%;
+        left: 20vw;
+        bottom: 150px;
+    }
+}
+
+@keyframes weather-box {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+#icon img{
+    display: block;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    animation-name: weather-icon;
+    animation-duration: 2s ;
+    animation-fill-mode: forwards;
+}
+
+#weather-box{
+    animation-name: weather-box;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
