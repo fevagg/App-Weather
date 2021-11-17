@@ -8,16 +8,17 @@ getJSON(cities).then(result=>{
     }
 });
 
+//Search functionality
 search.addEventListener('keyup', ()=>{
     const searchedCity = citiesArray.filter(city => city.name.toLowerCase().startsWith(search.value.toLowerCase(), 0));
-    showPrev(searchedCity, 'app');
+    showPrev(searchedCity);
     if(search.value === ''){
-        showPrev([],'app');
+        showPrev([]);
     }
     prevURL();
     btn.addEventListener('click', ()=>{
         const searchedCity = citiesArray.filter(city => city.name.toLowerCase() === search.value.toLowerCase(), 0);
-        showPrev(searchedCity, 'app');
+        showPrev(searchedCity);
         prevURL();
     });
 });

@@ -1,0 +1,36 @@
+@keyframes photo-animation {
+    from{
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+    to{
+        opacity: 100%;
+        left: 0;
+    }
+}
+
+@keyframes text-animation {
+    0%{
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    50%{
+        opacity: 60%;
+        right: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+#profile-text{
+    animation-name: text-animation;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+
+#profile-photo{
+    animation-name: photo-animation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
