@@ -1,4 +1,4 @@
-const cities = '../node_modules/cities.json/cities.json';
+const cities = 'cities.json/cities.json';
 
 function getJSON(url){
     let result = {};
