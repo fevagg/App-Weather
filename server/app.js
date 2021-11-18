@@ -13,6 +13,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, "../node_modules/")));
 app.use(express.static(path.join(__dirname, "../css/")));
 app.use(express.static(path.join(__dirname, "../js/")));
+app.use(express.static(path.join(__dirname, "../public/")));
 
 app.use(require("./routes/index.js"));
 

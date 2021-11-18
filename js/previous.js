@@ -16,7 +16,6 @@ function handlerWeather(){
     const previous = document.getElementsByClassName('previous');
     for(let prev of previous){
         prev.addEventListener('click', async (event)=>{
-            console.log(event.target.parentElement.children[1].innerHTML)
             const cityToSelect = visitedCities.find(city => city.city === event.target.parentElement.children[1].innerHTML);
             const citySelected = await weatherAPI(cityToSelect.city, cityToSelect.country_code);
             viewWeather(citySelected);
