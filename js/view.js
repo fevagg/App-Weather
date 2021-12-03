@@ -31,7 +31,7 @@ function visitedPrev(array){
         const arrayCutted = array.slice(array.length - 4, array.length);
         for(let obj of arrayCutted){
             html += `
-            <div class="col-auto bg-dark m-2 text-white d-flex justify-content-between align-items-center previous" style="width: 270px; height: 70px; border-radius: 17px;cursor:pointer;">
+            <div class="col-auto bg-dark m-2 text-white d-flex justify-content-between align-items-center previous" style="width: 375px; height: 70px; border-radius: 17px;cursor:pointer;">
                 <img src="https://openweathermap.org/img/wn/${obj.icon}@2x.png" alt="" style="width: 100px;">
                 <h6>${obj.city}</h6><span class="m-3 fp fp-rounded ${obj.country_code.toLowerCase()}"></span>
                 <i class="fa fa-times exit" aria-hidden="true" style="cursor:pointer"></i>
@@ -41,7 +41,7 @@ function visitedPrev(array){
     }else{
         for(let obj of array){
             html += `
-            <div class="col-auto bg-dark m-2 text-white d-flex justify-content-between align-items-center previous" style="width: 270px; height: 70px; border-radius: 17px; cursor:pointer;">
+            <div class="col-auto bg-dark m-2 text-white d-flex justify-content-between align-items-center previous" style="width: 375px; height: 70px; border-radius: 17px; cursor:pointer;">
                 <img src="https://openweathermap.org/img/wn/${obj.icon}@2x.png" alt="" style="width: 100px;">
                 <h6>${obj.city}</h6><span class="m-3 fp fp-rounded ${obj.country_code.toLowerCase()}"></span>
                 <i class="fa fa-times exit" aria-hidden="true" style="cursor:pointer"></i>
